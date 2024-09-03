@@ -193,7 +193,7 @@ class VlcjVideoPlayerState(parentCoroutineContext: CoroutineContext) : PlayerSta
     override suspend fun startPlayer(data: VlcjData) {
         data.setPlay()
 
-//        player.media().options().add(*arrayOf(":avcodec-hw=none")) // dxva2
+        player.media().options().add(*arrayOf(":avcodec-hw=any")) // dxva2
 //        player.controls().play()
 //        player.media().play/*OR .start*/(data.videoData.file.absolutePath)
     }
